@@ -1,12 +1,15 @@
 import pandas as pd
 import mysql.connector
+from dotenv import load_dotenv
+import os
 
-# Configuración de conexión a MySQL
+load_dotenv()  # Carga las variables del archivo .env
+
 db_config = {
-    'host': 'localhost',
-    'user': 'TU_USUARIO',
-    'password': 'TU_CONTRASEÑA',
-    'database': 'TU_BASE_DE_DATOS'
+    'host': os.getenv('DB_HOST'),
+    'user': os.getenv('DB_USER'),
+    'password': os.getenv('DB_PASSWORD'),
+    'database': os.getenv('DB_NAME')
 }
 
 # Leer el archivo Excel
