@@ -12,7 +12,7 @@ db_config = {
     'database': os.getenv('DB_NAME')
 }
 
-excel_file = 'excel2.xlsm'
+excel_file = 'excel.xlsm'
 
 # Leer el archivo con la fila 1 como cabecera
 df = pd.read_excel(excel_file, header=0)
